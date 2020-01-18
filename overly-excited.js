@@ -6,21 +6,29 @@ let sentence = ["The", "walrus", "danced", "through", "the", "trees", "in", "the
     the array as the sole argument. It should iterate over the array
     and output the words to the browser console.
 */
-function addExcitement(theWordArray) {
+function addExcitement(theWordArray, punctuation) {
 
     // Each time the for loop executes, you're going to add one more word to this string
     let buildMeUp = "";
 
     /* 
+    SOME WORDS ARE MORE EXCITING
         Add logic to addExcitement that places an exclamation point (!)
         after every third word. Read the following English statement
         and write the equivalent in JavaSript code to make it work.
     */
 
+    /* 
+    PRACTICE FUNCTION ARGUMENTS
+    Add a new argument to the function so that a developer can specify
+    which character should be displayed instead of it always being an
+    exclamation point.S
+    */
+
     for (let i = 0; i < theWordArray.length; i++) {
         // Concatenate the new word onto buildMeUp
         if ((i+1) % 3 === 0) {
-            buildMeUp += theWordArray[i] + "! ";
+            buildMeUp += theWordArray[i] + punctuation + " ";
         } else {
             buildMeUp += theWordArray[i] + " ";
         }
@@ -31,4 +39,7 @@ function addExcitement(theWordArray) {
 }
 
 // Invoke the function and pass in the array
-addExcitement(sentence);
+// addExcitement(sentence);
+
+// I want to use a question mark
+addExcitement(sentence, "?")
