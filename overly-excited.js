@@ -6,7 +6,7 @@ let sentence = ["The", "walrus", "danced", "through", "the", "trees", "in", "the
     the array as the sole argument. It should iterate over the array
     and output the words to the browser console.
 */
-function addExcitement(theWordArray, punctuation) {
+function addExcitement(theWordArray, punctuation, num) {
 
     // Each time the for loop executes, you're going to add one more word to this string
     let buildMeUp = "";
@@ -25,10 +25,24 @@ function addExcitement(theWordArray, punctuation) {
     exclamation point.S
     */
 
+
+    /*
+    START Challenge: Multiple Punctuation
+    */
+    let punc = "";
+
+    for (num; num > 0; num--) {
+        punc += punctuation;
+    }
+
+    /*
+    END Challenge: Multiple Punctuation
+    */
+
     for (let i = 0; i < theWordArray.length; i++) {
         // Concatenate the new word onto buildMeUp
-        if ((i+1) % 3 === 0) {
-            buildMeUp += theWordArray[i] + punctuation + " ";
+        if ((i + 1) % 3 === 0) {
+            buildMeUp += theWordArray[i] + (punc) + " ";
         } else {
             buildMeUp += theWordArray[i] + " ";
         }
@@ -42,4 +56,14 @@ function addExcitement(theWordArray, punctuation) {
 // addExcitement(sentence);
 
 // I want to use a question mark
-addExcitement(sentence, "?")
+// addExcitement(sentence, "?")
+
+
+/*
+Challenge: Multiple Punctuation
+Add a new argument to the function so that a developer can
+specify how many times the special character should be added.
+*/
+
+// I want to use a 4 asterisks
+addExcitement(sentence, "*", 4)
