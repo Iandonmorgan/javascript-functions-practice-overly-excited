@@ -6,7 +6,7 @@ let sentence = ["The", "walrus", "danced", "through", "the", "trees", "in", "the
     the array as the sole argument. It should iterate over the array
     and output the words to the browser console.
 */
-function addExcitement(theWordArray, punctuation, num) {
+const addExcitement = (theWordArray, punctuation, num) => {
 
     // Each time the for loop executes, you're going to add one more word to this string
     let buildMeUp = "";
@@ -66,4 +66,4 @@ specify how many times the special character should be added.
 */
 
 // I want to use a 4 asterisks
-addExcitement(sentence, "*", 4)
+addExcitement(sentence, "*", 4);
